@@ -10,6 +10,8 @@ public class MainPessoa {
         String nome;
         int telefone;
         int idade;
+        String email;
+        String sexo;
 
         for (int i = 0; i < 5; ++i) {
             System.out.print("telefone: ");
@@ -19,8 +21,12 @@ public class MainPessoa {
             in.nextLine();
             System.out.print("nome: ");
             nome = in.nextLine();
+            System.out.print("email: ");
+            email = in.nextLine();
+            System.out.print("sexo: ");
+            sexo = in.nextLine();
 
-            agenda.add(new Pessoa(idade, nome, telefone));
+            agenda.add(new Pessoa(idade,nome, telefone, email, sexo ));
         }
 
         System.out.println("Pessoa mais nova: " + (agenda.getNomeMaisNova()));
