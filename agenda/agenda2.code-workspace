@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Java-1",
+			"path": "../../Java-1"
+		}
+	],
+	"settings": {
+		"vscode-pets.petSize": "small",
+		"vscode-pets.theme": "forest",
+		"vscode-pets.throwBallWithMouse": true
+	}
+}
