@@ -1,0 +1,52 @@
+//Escreva um programa que recebe dois números menores que 10 do teclado,
+// depois guarde em um array todos os números menores que 200 e que são divisíveis
+// simultaneamente por estes dois números. Depois imprima usando o array,
+// quantos são esses divisores comuns dos dois números e quais são
+
+//Veja abaixo um exemplo da saída desse programa.
+//
+//Informe um número inteiro maior que 0 e menor que 11
+//        3
+//Informe outro número inteiro maior que 0 e menor que 11
+//        7
+//Existem 9 números entre 1 e 200 que são divisíveis por 3 e 7. Estes números são:
+//        21
+//        42
+//        63
+//        84
+//        105
+//        126
+//        147
+//        168
+//        189
+
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Q1{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.printf("Informe um número inteiro maior que 0 e menor que 11:%n");
+        int N1 = sc.nextInt();
+        System.out.printf("Informe outro número inteiro maior que 0 e menor que 11:%n");
+        int N2 = sc.nextInt();
+
+         ArrayList<Integer> numeros = new ArrayList<>();
+
+        for (int i = 1; i < 199; i++){
+
+            if (i % N1 == 0 && i % N2 == 0){
+                numeros.add(i);
+            }
+        }
+
+        int quantidade = numeros.size();
+
+        System.out.printf("Existem %d números entre 1 e 200 que são divisíveis por %d e %d. Estes números são:%n", quantidade, N1, N2);
+
+        for (int n : numeros){
+            System.out.println(n);
+        }
+    }
+}
